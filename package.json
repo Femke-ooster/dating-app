@@ -1,0 +1,22 @@
+{
+  "name": "dating-app",
+  "version": "1.0.0",
+  "description": "node voor opdracht datingsite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Femke-ooster/dating-app.git"
+  },
+  "author": "Femke Oosterbaan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Femke-ooster/dating-app/issues"
+  },
+  "homepage": "https://github.com/Femke-ooster/dating-app#readme",
+  "dependencies": {
+    "skin-tone": "^2.0.0"
+  }
+}
