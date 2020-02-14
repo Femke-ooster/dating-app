@@ -1,0 +1,87 @@
+###*Week 2*
+#####_Vrijdag 14 februari 2020_
+
+####Command-line interface  (CLI)
+Alternatief voor een GUI
+
+Servers often have a CLI, not a GUI.
+
+(Bash is a command lamnguage )
+
+[~]$ rm -f foo.tx
+
+[~]$    = promt
+rm      = Command
+-f      = option
+foo.txt = Arguments
+
+ls      = show files/print files
+ls -a   = show hidden files (start with .)
+
+cd      = navigate through files
+cd ~    = shortcut naar user directory
+cd ..   = map terug
+cd ../a = een map terug en dan naar file a
+
+mkdir   = nieuwe map/folder aanmaken
+
+touch   = file aanmaken
+
+pwd     = current directory
+cmd k   = clear terminal
+:q!     = quit whatever you are doing
+rm      = remove
+rm      = remove file
+rm -r   = remove directory(map)
+i -S    = package toevoegen 
+cat     = concatenate (print) files
+mv      = move file to other file (geeft hem een andere naam)
+cp      = copy a file (from a.txt to b.txt)
+
+echo    = console.log maar dan voor in de terminal
+echo ~  = zie de folder waar je in zit (net als ls)
+
+echo "Alpha" >> foo.txt = wanneer je een text wil printen in een file (append)
+
+
+git init    = gelinkt met Git (bijv in je project folder)
+git staus   = status van je Git files 
+git add     = een file toevoegen
+git add .   = alles 
+git reset   = terug naar eerdere versie
+
+.gitignore  = wanneer je een map of file niet wil meenemen in bijv je git add.
+             _zet in de .gitignore file de files en mappen die je niet wil meenemen_
+             
+             
+git commit -m ""    = defenitieve commit voor je files naar Git 
+git log             = laat alle commits zien
+
+git branch      = master branch, dit is ook wat je ziet op je life server
+git checkout -b = kopie van master branch voor als je bijv features wil toevoegen
+                  deze kan je gebruiken wanneer je nieuwe dingen wil proberen en niet
+                  wil committen naar de master branch
+                  
+git push (naam repository) master  = 
+
+
+.env        = word gebruikt voor vertouwelijke informatie die je moet gebruiken voor
+              je website of app
+             *.env zet je dus ook in je .gitignore file*
+
+
+Wanneer er een spatie zit in je map naam, kan je twee dingen gebruiken:
+* hello\ world
+* hello_world
+
+*DANGER* : Sudo Commando 
+With this command you can do anything, even deleting data or maps.
+_Be careful with this!!_
+
+
+*Git is lokaal : GitHub zet je lokale bestanden online*
+*Wanneer je je project in een serber wil zetten, kan je niet de GitHub desktop gebruiken, maar een command line in je Terminal met Git*
+
+
+
+

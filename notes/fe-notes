@@ -1,0 +1,77 @@
+###*Week 2*
+#####_Donderdag 13 februari 2020_
+
+[Smashing Magazine](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
+
+####Progressive Enhancement
+
+Cutting the Musterd test: 
+Cmd + p of cmd + shift + p of control + shift + p  _in de console_
+(haalt javascript weg uit de browser)
+
+Je wil dat je website een goede ervaring geeft aan iedereen, dus ook die mensen waar JavaScript niet van toepassing is.
+
+Kijk dus eerst naar wat wel en niet ondersteund wordt bij de gebruiker op de browser; _browser stack_.
+(dit kan je checken bij _caniuse.com_)
+
+In je CSS zou je bijvoorbeeld RGB en HSL gebruiken. Wordt HSL niet ondersteunt, dan wordt deze overgeslagen. Zo zullen oude browsers nog steeds de RGB kunnen gebruiken in plaat van de HSL. 
+
+####Job Stories
+Welke feature wil je maken?
+Moet kunnen werken *zonder enhancent* van JavaScript!
+Dit betekend dat je de extra styling van je pagina zonder JavaScript zou kunnen doen.
+
+En denk aan je Progressive Enhancement: 
+*html
+*css
+*js
+
+####In de database _zonder_ JavaScript
+Zoek informatie over de <form> 
+*action tag
+*method tag
+
+Frontend = de laptop
+Backend  = de server (node) _we weten dat de server JS kan gebruiken, dus we kunnen wel JS gebruiken om data op te halen via de server.
+Database = de data
+
+--------------------------------------------------------------------------------------
+
+typeof 42
+> 'number'
+
+typeof typeof 42
+> 'string'
+
+
+
+
+var number = [10, 20, 30, 40];
+
+for (var indeex = 0; index <number.length; index++) {
+    console.log(index, number[index]);
+};
+
+> 0 10
+> 1 20
+> 2 30
+> 3 40
+> undefined
+
+var number = [10, 20, 30, 40];
+
+for (var indeex = 0; index <number.length; index++) {
+    setTimeout (function() {
+    console.log(index, number[index]);
+    }, 1000);
+};
+
+> 4 undefined
+
+JavaScript gaat door met de forloop, dit betekend dat de uitkomst al 4 keer is geloopt, en het laatste resultaat is >undefined, dus deze krijg je ook te zien in je console,
+
+--------------------------------------------------------------------------------------
+
+*Duidelijkheid staat _boven alles_ in JavaScript*
+
+--------------------------------------------------------------------------------------

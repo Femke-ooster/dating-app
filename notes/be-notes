@@ -1,0 +1,58 @@
+###*Week 2*
+#####_Donderdag 13 februari 2020_
+
+Recap
+
+*node modules
+*npm 
+
+*npm init (zeggen tegen een map: dit is een node project)
+*npm install (depedencie met package en versie: 2.5.1 - major.minor.patch)
+
+####Server
+Wanneer een client(web, app, game) iets opvraagt van de server.
+Response is wanneer de server(machine) iets terug geeft.
+
+developer.mozilla.org = verzoek van client
+webpagina = response van de server
+
+
+
+####HTTP
+_een pad_
+
+Eigen http aanmaken gaat via onrequest.
+Dan wordt er een port aangemaakt die wanneer je op jouw website wil, zal worden geopend.
+
+Wanneer je een poort hebt aangemaakt, met een paar andere functies, kan je via node.js een server opnenen.
+
+Met if else statements kan je met /about bijv een nieuwe pagina maken
+
+
+
+####Express
+_maakt het makkelijker om features toe te voegen_
+
+API: geeft toegang tot andere informatie die al eens is gegeven.
+
+.get = method: iets wat jij als client wil hebben
+app.get ('/', callback) = */* is een positie van een bestand of map
+                          */movies* 
+                          */:id* is een identifier
+                          */static* waar je direct naartoe kan zonder het pad te hoeven volgen, het is een open bestand zonder gatekeeper
+                          Dit is dan toegankelijk voor iedereen ook de client.
+
+.post = wanneer een client iets wil sturen naar een server
+
+.delete = wanneer een client iets wil verwijderen
+
+--------------------------------------------------------------------------------------
+
+####Terminal
+
+spatie = \ 
+map omhoog = cd ..
+
+node index.js
+> Hello World!
+
