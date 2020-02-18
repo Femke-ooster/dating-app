@@ -1,15 +1,15 @@
-###*Week 2*
-#####_Donderdag 13 februari 2020_
+### *Week 2*
+##### _Donderdag 13 februari 2020_
 
 Recap
 
-*node modules
-*npm 
+* node modules
+* npm 
 
-*npm init (zeggen tegen een map: dit is een node project)
-*npm install (depedencie met package en versie: 2.5.1 - major.minor.patch)
+* npm init (zeggen tegen een map: dit is een node project)
+* npm install (depedencie met package en versie: 2.5.1 - major.minor.patch)
 
-####Server
+#### Server
 Wanneer een client(web, app, game) iets opvraagt van de server.
 Response is wanneer de server(machine) iets terug geeft.
 
@@ -18,7 +18,7 @@ webpagina = response van de server
 
 
 
-####HTTP
+#### HTTP
 _een pad_
 
 Eigen http aanmaken gaat via onrequest.
@@ -30,7 +30,7 @@ Met if else statements kan je met /about bijv een nieuwe pagina maken
 
 
 
-####Express
+#### Express
 _maakt het makkelijker om features toe te voegen_
 
 API: geeft toegang tot andere informatie die al eens is gegeven.
@@ -46,9 +46,9 @@ app.get ('/', callback) = */* is een positie van een bestand of map
 
 .delete = wanneer een client iets wil verwijderen
 
---------------------------------------------------------------------------------------
 
-####Terminal
+
+#### Terminal
 
 spatie = \ 
 map omhoog = cd ..

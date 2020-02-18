@@ -1,9 +1,9 @@
-###*Week 2*
-#####_Donderdag 13 februari 2020_
+### *Week 2*
+##### _Donderdag 13 februari 2020_
 
 [Smashing Magazine](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
 
-####Progressive Enhancement
+#### Progressive Enhancement
 
 Cutting the Musterd test: 
 Cmd + p of cmd + shift + p of control + shift + p  _in de console_
@@ -16,17 +16,17 @@ Kijk dus eerst naar wat wel en niet ondersteund wordt bij de gebruiker op de bro
 
 In je CSS zou je bijvoorbeeld RGB en HSL gebruiken. Wordt HSL niet ondersteunt, dan wordt deze overgeslagen. Zo zullen oude browsers nog steeds de RGB kunnen gebruiken in plaat van de HSL. 
 
-####Job Stories
+#### Job Stories
 Welke feature wil je maken?
 Moet kunnen werken *zonder enhancent* van JavaScript!
 Dit betekend dat je de extra styling van je pagina zonder JavaScript zou kunnen doen.
 
 En denk aan je Progressive Enhancement: 
-*html
-*css
-*js
+* html
+* css
+* js
 
-####In de database _zonder_ JavaScript
+#### In de database _zonder_ JavaScript
 Zoek informatie over de <form> 
 *action tag
 *method tag
