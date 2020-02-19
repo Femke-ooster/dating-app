@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+li {
+  width: 100%;
+}
+
+a {
+    margin: 1em
+}
+
+#home {
+    align-self: flex-start;
+}
