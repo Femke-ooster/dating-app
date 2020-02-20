@@ -1,28 +1,35 @@
+font-family: 'Hind', sans-serif;
+
 body {
-  background-color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-
-}
-
-ul {
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-li {
+  display: flex;
   width: 100%;
 }
 
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+li {
+  list-style: none;
+}
+
 a {
-    margin: 1em
+    margin: 1em;
+    text-decoration: none;
+}
+
+img {
+  width: 2.3em;
 }
 
 #home {
-    align-self: flex-start;
+  width: 4em;
 }
