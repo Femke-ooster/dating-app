@@ -1,3 +1,33 @@
+### *Week 1*
+##### _Donderdag 6 februari 2020_
+
+#### States
+* active (a:)
+* hover (a:)
+* default (a)
+* focus (a:)
+* visited (wordt bijna niet meer gebruikt)
+* (in)valid
+* disabled
+
+* ::before
+* ::after
+
+transition: 1s 2s;
+1s = duur animatie
+2s = duur vertraging
+
+Extra's voor animatie:
+* ease
+* ease-in
+* ease-out
+* ease-in-out
+* transform:
+
+
+
+
+
 ### *Week 2*
 ##### _Donderdag 13 februari 2020_
 
@@ -5,7 +35,7 @@
 
 #### Progressive Enhancement
 
-Cutting the Musterd test: 
+Cutting the Musterd test:
 Cmd + p of cmd + shift + p of control + shift + p  _in de console_
 (haalt javascript weg uit de browser)
 
@@ -14,20 +44,20 @@ Je wil dat je website een goede ervaring geeft aan iedereen, dus ook die mensen 
 Kijk dus eerst naar wat wel en niet ondersteund wordt bij de gebruiker op de browser; _browser stack_.
 (dit kan je checken bij _caniuse.com_)
 
-In je CSS zou je bijvoorbeeld RGB en HSL gebruiken. Wordt HSL niet ondersteunt, dan wordt deze overgeslagen. Zo zullen oude browsers nog steeds de RGB kunnen gebruiken in plaat van de HSL. 
+In je CSS zou je bijvoorbeeld RGB en HSL gebruiken. Wordt HSL niet ondersteunt, dan wordt deze overgeslagen. Zo zullen oude browsers nog steeds de RGB kunnen gebruiken in plaat van de HSL.
 
 #### Job Stories
 Welke feature wil je maken?
 Moet kunnen werken *zonder enhancent* van JavaScript!
 Dit betekend dat je de extra styling van je pagina zonder JavaScript zou kunnen doen.
 
-En denk aan je Progressive Enhancement: 
+En denk aan je Progressive Enhancement:
 * html
 * css
 * js
 
 #### In de database _zonder_ JavaScript
-Zoek informatie over de <form> 
+Zoek informatie over de <form>
 *action tag
 *method tag
 

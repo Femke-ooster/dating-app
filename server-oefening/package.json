@@ -1,0 +1,14 @@
+{
+  "name": "server-oefening",
+  "version": "1.0.0",
+  "description": "server oefening jason",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "femke oosterbaan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -4,7 +4,7 @@
 Recap
 
 * node modules
-* npm 
+* npm
 
 * npm init (zeggen tegen een map: dit is een node project)
 * npm install (depedencie met package en versie: 2.5.1 - major.minor.patch)
@@ -37,7 +37,7 @@ API: geeft toegang tot andere informatie die al eens is gegeven.
 
 .get = method: iets wat jij als client wil hebben
 app.get ('/', callback) = */* is een positie van een bestand of map
-                          */movies* 
+                          */movies*
                           */:id* is een identifier
                           */static* waar je direct naartoe kan zonder het pad te hoeven volgen, het is een open bestand zonder gatekeeper
                           Dit is dan toegankelijk voor iedereen ook de client.
@@ -50,9 +50,95 @@ app.get ('/', callback) = */* is een positie van een bestand of map
 
 #### Terminal
 
-spatie = \ 
+spatie = \
 map omhoog = cd ..
 
 node index.js
 > Hello World!
 
+
+### *Week 3*
+##### _Donderdag 13 februari 2020_
+
+#### HTTP & server
+
+http://test.example.com:3000/users/search?q=test&w=all#result
+
+Protocol  -
+Subdomain -
+Domain    -
+Port      -
+Path      -
+Query     - data die de server tegug geeft aan de client
+Fragment  - data
+
+*HTTP = metadata van een verzoek*
+
+Create: POST,PUT      - sturen van data
+Read  : GET           - ontvangen van data
+Update: PATCH
+Delete: DELETE
+
+Afspraken tussen servers en browsers met bijvoorbeeld een 404
+Zo kan de client duidelijk zien wat er aan de hand is
+
+
+Mine type - content type tag
+Die heb je nodig zodat de client weet wat voor data binnen komt
+
+text/html
+text = type
+html =
+
+*Server*
+
+URL uitlezen met req.url
+
+_Duidelijke communicatie voor de client is het beroep van een backender die werkt met de server._
+
+Express maakt het serverbouwen makkelijker.
+
+Static = een verzoek wat de client doet zonder controle te hoeven doen.
+Handig wanneer je ook CSS meesturen zonder het te controleren.
+Dus zonder toegang of controle van de server.
+*_Het bestand is publiekelijk beschikbaar_*
+
+app.use('/static', express.static('public'));
+Zet dit in je js als je de pagina statisch wil maken.
+
+
+app.get("/", callback)
+Method = get
+PATCH  = "/"
+
+
+Template Engine = via npm
+Use static template files for you website.
+
+*In de Terminal*
+* Naar de map die je wil gebruiken
+* npm init
+* npm install express --save
+
+*In je index.js*
+
+const express = require('express');
+const app = express();
+const port = 8000;
+
+app.use("/static", express.static(__dirname + "/static")); /**/
+
+app.get("/", (req, res) => {
+  res.write("<p>Hello!<p>");
+  res.end();
+});
+
+app.get("/about", (req, res) => {
+  res.write("<p>Over mij<p>");
+  res.end();
+});
+
+app.listen(port, () => console.log("Running my NodeJS server at"));
+
+*server opstarten in terminal:*
+node index.js
