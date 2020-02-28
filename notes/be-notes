@@ -109,7 +109,7 @@ Zet dit in je js als je de pagina statisch wil maken.
 
 app.get("/", callback)
 Method = get
-PATCH  = "/"
+Path  = "/"
 
 
 Template Engine = via npm
@@ -142,3 +142,47 @@ app.listen(port, () => console.log("Running my NodeJS server at"));
 
 *server opstarten in terminal:*
 node index.js
+
+
+### *Week 3*
+##### _Donderdag 27 februari 2020_
+
+#### Templating
+_HTML mengen met data_
+
+Store HTML outside of JS
+
+* HandleBars
+* EJS
+
+index.ejs = eigenlijk een html bestand
+
+Wat je ziet in de browser:
+<h1>
+My cool Website
+</h1>
+
+Wat je ziet in de server:
+<h1>
+<%= title %>
+</h1>
+
+<% JavaScript code %>
+
+Bijvoorbeeld:
+
+Als je een bestand hebt head.ejs met de code die je gebruikt in je header,
+kan je deze herhalen in je andere bestanden met:
+
+> <% include head.ejs %>
+
+
+app.set ('view engine', 'ejs')
+app.set ('views', 'views')      - views in map views
+
+res.render('home.ejs', data)    - er wordt data gekoppeld naar home.EJS
+
+res.status(404).render('home.ejs', data) - 404 wordt gekoppeld naar je pagina
+
+
+<%= name %> wordt gekoppeld met {name:'hallo'}

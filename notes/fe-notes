@@ -104,4 +104,147 @@ JavaScript gaat door met de forloop, dit betekend dat de uitkomst al 4 keer is g
 
 *Duidelijkheid staat _boven alles_ in JavaScript*
 
---------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+
+### *Week 3*
+##### _Donderdag 27 februari 2020_
+
+#### DOM Node
+
+* node      = een HTML element
+* tag name  = de naam van het element
+
+HTML - body - script
+
+            - p - span
+                - span
+                
+            - h1 - span 
+            
+            
+* parentNode    = naar boven in de boom
+* childNode     = naar beneden in de boonm
+
+GetElementByTag = altijd een array van bijv alle span
+
+*Recursion* heeft nodig:
+* call naar zichzelf
+* end state/condition - wanneer er geen children meer zijn in de boom
+
+
+
+----------------------------------------------------------------------------------
+function recus(data, tries) {
+    if(tries === 10) {
+        return data;
+    }
+    
+    if(data!) {
+        data = []
+    }
+    
+    data.push(tries);
+    return recur(data, tries+1);
+}
+
+recur (null, 0)
+> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+
+
+
+<h1>Heading with a <span>span</span> element.</h1>
+<p>A paragraph with <span>one</span>, <span>two</span>
+  spans.</p>
+
+<script>
+  function byTagName(node, tagName) {
+    *// Your code here.*
+  }
+
+  console.log(byTagName(document.body, "h1").length);
+  // → 1
+  console.log(byTagName(document.body, "span").length);
+  // → 3
+  let para = document.querySelector("p");
+  console.log(byTagName(para, "span").length);
+  // → 2
+</script>
+
+
+*// Your code here.*
+function byTagName(node, tagName) {
+    console.log(node, tagName); 
+  }
+  
+  > HTMLBodyElement{} h1
+
+
+*// Your code here.*
+function byTagName(node, tagName) {
+    var currentTagName = node.nodeName;
+    
+    console.log(node, tagName); 
+  }
+
+> BODY h1
+
+*// Your code here.*
+function byTagName(node, tagName) {
+    var currentTagName = node.nodeName;
+    var currentTagNameLowerCase = currentTagName.toLowerCase();
+    
+    console.log(node, tagName); 
+  }
+
+> body h1
+----------------------------------------------------------------------------------
+
+Wat je wil is dat je code door de boom gaat en alles vergelijkt met de tagName die je wil hebben (bijv h1), dan kijk je of die tak een child heeft, wel, dan gaat de code nog een keer doorheen, niet, stopt de code.
+
+
+#### *GOEIE CODE* get ellements by tagName
+
+<script>
+    function byTagName(node, tagName) {
+    var nodes = [];
+    
+    checkTagName(node, tagName);
+    
+    return nodes
+    
+    function checkTagName(node, tagName) {
+        var currentTagName = node.nodeName;
+        var currentTagNameLowerCase = currentTagName.toLowerCase;
+        var children = node.childrenNodes;
+        
+        if(currentTagNameLowerCase === tagName) {
+            nodes.push(node);
+        }
+    
+        if(children) {
+            for(var index = 0 index < children.lenght - 1; index++) {
+                checkTagName(children[index], tagName);
+            }
+        }
+      }
+    }
+
+console.log(
+    byTagName(document.body, "span")
+);
+</script>
+
+
+
+
+
+
+
+
+
+
+

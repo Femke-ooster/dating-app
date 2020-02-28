@@ -48,3 +48,20 @@ p {
 
 
 /*END MAIN*/
+
+div {
+  background-color: red;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  left: 2.5em;
+  bottom: 3.3em;
+  color: white;
+}
+
+#notification {
+  position: relative;
+  bottom: .1em;
+  font-size: .75em;
+}

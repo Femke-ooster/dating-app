@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Femke-ooster/dating-app#readme",
   "dependencies": {
+    "pug": "^2.0.4",
     "skin-tone": "^2.0.0"
   }
 }
