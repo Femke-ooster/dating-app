@@ -186,3 +186,39 @@ res.status(404).render('home.ejs', data) - 404 wordt gekoppeld naar je pagina
 
 
 <%= name %> wordt gekoppeld met {name:'hallo'}
+
+### *Week 4*
+##### _Maandag 2 maart 2020_
+
+#### Data
+
+Je kan voor het ophalen van data een moeilijke manier,
+maar het kan ook via ejs
+
+met bijvoorbeel:
+> <% for(var i = 0, i data.lenght; i++) { %>
+
+#### form
+
+Via een post iets sturen naar de server =
+> <form action=""/add-movie" name="title" method=post>
+
+de titel wordt gestuurd naar de pagina add movie door middel van een post
+
+* voeg toe: npm install slug body-parser
+
+slug - speciale tekens niet toegang
+body-parser - maakt de data makkelijker te filteren
+
+req.body - data verstuurd door de client
+res.redirect - naar een route
+
+post een movies
+redirect naar een nieuwe webpagina
+vind die pagina terug
+
+film verwijderen
+params - aan het einde van je URL
+
+xhr
+fetch

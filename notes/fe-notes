@@ -119,14 +119,16 @@ HTML - body - script
 
             - p - span
                 - span
-                
-            - h1 - span 
-            
-            
+
+            - h1 - span
+
+
 * parentNode    = naar boven in de boom
 * childNode     = naar beneden in de boonm
 
 GetElementByTag = altijd een array van bijv alle span
+
+## Recursive function
 
 *Recursion* heeft nodig:
 * call naar zichzelf
@@ -139,11 +141,11 @@ function recus(data, tries) {
     if(tries === 10) {
         return data;
     }
-    
+
     if(data!) {
         data = []
     }
-    
+
     data.push(tries);
     return recur(data, tries+1);
 }
@@ -177,17 +179,17 @@ recur (null, 0)
 
 *// Your code here.*
 function byTagName(node, tagName) {
-    console.log(node, tagName); 
+    console.log(node, tagName);
   }
-  
+
   > HTMLBodyElement{} h1
 
 
 *// Your code here.*
 function byTagName(node, tagName) {
     var currentTagName = node.nodeName;
-    
-    console.log(node, tagName); 
+
+    console.log(node, tagName);
   }
 
 > BODY h1
@@ -196,8 +198,8 @@ function byTagName(node, tagName) {
 function byTagName(node, tagName) {
     var currentTagName = node.nodeName;
     var currentTagNameLowerCase = currentTagName.toLowerCase();
-    
-    console.log(node, tagName); 
+
+    console.log(node, tagName);
   }
 
 > body h1
@@ -211,20 +213,20 @@ Wat je wil is dat je code door de boom gaat en alles vergelijkt met de tagName d
 <script>
     function byTagName(node, tagName) {
     var nodes = [];
-    
+
     checkTagName(node, tagName);
-    
+
     return nodes
-    
+
     function checkTagName(node, tagName) {
         var currentTagName = node.nodeName;
         var currentTagNameLowerCase = currentTagName.toLowerCase;
         var children = node.childrenNodes;
-        
+
         if(currentTagNameLowerCase === tagName) {
             nodes.push(node);
         }
-    
+
         if(children) {
             for(var index = 0 index < children.lenght - 1; index++) {
                 checkTagName(children[index], tagName);
@@ -237,14 +239,3 @@ console.log(
     byTagName(document.body, "span")
 );
 </script>
-
-
-
-
-
-
-
-
-
-
-
