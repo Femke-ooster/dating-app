@@ -239,3 +239,113 @@ console.log(
     byTagName(document.body, "span")
 );
 </script>
+
+
+### *Week 4*
+##### _Donderdag 5 maart 2020_
+
+#### Events
+Interactie van user op de DOM
+
+(document)
+* .getElementByID
+* .getElementByTag
+
+Je pakt een button via de getElement
+Maar hij werkt pas als je hem koppeld aan JS met .addEventListener
+
+> addEventListener('click', function(event){
+> console.log(event);
+> });
+
+* (onclick kan ook, maar is verouderd)
+* touch Event - event.touch
+  * touch start (voor swipen)
+  * touch end (voor swipen)
+
+* MouseEvent - event.mouse - zie waar je voor het laatst hebt gedrukt met de muis met x- en y- as
+  * click event
+  * target - zo kan je buiten de model klikken en de model afsluiten
+
+* keyboard event - event.key
+  * key up
+  * key down
+
+  (wanneer je op het donkere klikt achter de reclame bijv)
+
+> document. - info wordt gehaald uit de DOM
+> window.   - info worj
+
+Model - forceerd je te kijken naar dat onderdeel door de achtergrond donker te maken bijv.
+
+Events
+- gaan van de window naar de target en dan weer terug naar de window
+  je klikt dus op de window en op de butten tegelijk wanneer je klikt op het scherm
+
+{name:'henk'} - dit staat in je RAM geheugen
+Elke functie wordt aangemaakt en opgeslagen in de geheugen
+
+Als je dit wil veranderen moet je een functie maken die die functie weer verwijderd
+
+
+#### Timers
+.setTimeout
+
+* setTimeout
+* clearTimeout
+
+> => === function()
+
+var bombTimer = setTimeout( => {
+console.log('BOOM!');
+}, 500);
+
+- 500 staat voor 500 ms
+
+*Asychronise programming*:
+
+* Wanneer je een functie niet meer nodig hebt in je JS omdat hij al naar de browser is gestuurd
+* Zo kan JS gewoon verder met lezen
+* Nadat de functie is gebruikt op de browser,
+* wordt het weer teruggestuurd naar de JS
+
+- _Dit zorgt ervoor dat je JS niet hoeft te wachten met het uitlezen van je code_
+
+#### Debouncing
+- kijkt hoelaang je _niet_ aan het typen bent.
+
+Zo roep je niet de hele tijd API's aan, maar alleen wanneer je een tijd niet hebt getyped.
+Dit is bijvoorbeeld handig wanneer je autocomplete wil toevoegen
+
+#### HTTP
+
+router.get  - als je naar een url gaat
+router.post - als je info naar de database wil sturen
+
+<form method='get' action='example/message.html'>
+
+#### Fetch
+- browser API
+
+Doet een request naar een server waardoor je acties en reacties krijgt.
+Form tag maar dan met JS
+
+#### Promises
+Async
+
+setTimeout - Promises
+_zelfde functie, anders opgeschreven_
+
+fetch('http//blabla.nl')
+> promise {<pending>}
+
+Er wordt gewacht totdat er data wordt teruggestuurd
+
+fetch('url')
+ .then(function(response) {
+    console.log(response);
+ })
+
+ .catch(function(error) {
+    console.log(error);
+ })

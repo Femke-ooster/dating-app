@@ -213,6 +213,36 @@ body-parser - maakt de data makkelijker te filteren
 req.body - data verstuurd door de client
 res.redirect - naar een route
 
+
+
+app.use     = file die je mag gebruiken
+ - app.use("/static", express.static(__dirname + "/static"));
+ 
+app.set     = zet de mapjes waar je je template kan vinden
+ - app.set("views", "views");
+ 
+app.get     = client die verzoek doet
+ - app.get("/", function(req, res){})
+ 
+app.listen  =
+app.delete  =
+app.post  =
+
+res = sturen naar client: methods
+req = ontvangen van
+
+res.render  = tik in de pagina die je wil laten zien
+res.write   =
+res.end     =
+res.status  =
+res.open    =
+res.onload  =
+res.send    =
+
+window.location =
+
+
+
 post een movies
 redirect naar een nieuwe webpagina
 vind die pagina terug
@@ -222,3 +252,29 @@ params - aan het einde van je URL
 
 xhr
 fetch
+
+
+### *Week 4*
+##### _Maandag 5 maart 2020_
+
+#### File
+_Afbeeldingen sturen_
+
+npm install multer
+* alle bestanden die de client stuurt -> static/uploads
+
+method= post
+enctype='multipart/form-data'
+^
+Zo kan je 
+
+<input name'cover' type='file' accept='image/*'>
+- img upload van alle types
+
+
+app.post('/add-movie', function(req, res){
+  console.log(req.body)
+  res.end()
+})
+
+
