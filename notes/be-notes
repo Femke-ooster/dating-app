@@ -278,3 +278,55 @@ app.post('/add-movie', function(req, res){
 })
 
 
+### *Week 5*
+##### _Donderdag 27 februari 2020_
+
+#### SQL
+
+NoSQL
+
+MongoDB
+Data opslaan maar niet in tabel, maar alles in een schema alles op een hoop.
+- gebruikt js syntax dus dezelfde taal
+- handige methods - method-reduce
+als je mongodb download wordt je laptop een database 
+
+hoe werkt het met node?
+
+npm install mongodb
+npm install dotenv
+
+- maak een bestand aan: .env
+zet daar alle dinegen in die je nodig hebt
+- port is altijd 27017
+Deze bestanden wil je *niet* op github zetten (met .gitignore)
+zet daar alle info op die iemamd anders niet nodig zou moeten hebben
+
+*mongoDB atlas*,
+je hebt een login waardoor je altijd een databese hebt, zelfs als het niet op je laptop is
+
+ip adress toevoegen op school en thuis
+
+*in .env* 
+db_user
+
+DB_HOST=url
+DB_PORT=27017
+DB_NAME=
+
+process.env.db_user
+
+
+*compass* - visueel overzicht van je database
+
+mongobd:// = een link naar je database
+
+.collection - tabel waar info in kan
+
+.find - alles dat teruggeven wordt (alles terug uit connectie)
+.findOne - zoek een specifiek deel ()
+
+.insertOne - een heel object opslaan in je database
+
+wat doet renderen precies?
+
