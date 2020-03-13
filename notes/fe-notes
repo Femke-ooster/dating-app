@@ -349,3 +349,108 @@ fetch('url')
  .catch(function(error) {
     console.log(error);
  })
+ 
+ 
+### *Week 5*
+##### _Donderdag 12 maart 2020_
+
+#### Looping
+* while loop            - run block of code or doesn't execute when false
+* do-while loop         - at least excecuted once
+* for loop              - loop till certain condition - three parts: initializer, test condition, and updater
+* for-in loop           - executes loop's body once : key
+* for-inoof loop        - executes loop's body once :  
+* break statement       - immidietly exits the loop
+* continue statement    - stops the execution of the current iteration and goes back to the beginning of the loop to begin the next iteration
+
+#### Higherorder Functions
+_A higher order function is a function that takes a function as an argument, or returns a function._
+
+- outer function
+- inner function
+
+Examples: 
+> .map()  
+> .filter(). Both of them take a function as an argument. They're both higher order functions.
+
+In other words, you can use higher order functions to make a function polymorphic. As you can see, higher order functions can be a whole lot more reusable and versatile than their first order cousins. 
+Generally speaking, *you’ll use higher order functions in combination with very simple first order functions in your real application code*.
+
+greaterThan(number){
+    return innerNumber => number < innerNumber
+}
+
+greaterThan10 = greaterThan(10)
+greaterThan20 = greaterThan(20)
+
+var user = { preverence: 21 }
+
+greaterThan20(user.preverence)
+> true
+
+
+
+Assesment 1 - Basis kennis over artikelen
+Assesment 2 - Progressive enhanced
+
+Progressive Enhancement:
+centreer je tekst: div {margin: width: 40 rem; margin: 0 auto;}
+flex - order 1 zet block op eerste plek
+
+href="#" inpage navigation
+dus:
+
+a href="#menu"
+nav id="menu"
+
+
+in html:
+a data-hamburger
+in javascript:
+document.querySelector('[data-hamburger]')
+
+preventDefault = annuleert andere events
+
+position: absolute  - in DOM
+position: fixed     - in viewport
+position: sticky    - eerst DOM dan in viewport
+
+animatie: transform en opacity
+
+transform: translatex(-100%);
+^ duwt element helemaal naar links
+
+class toevoegen:
+
+id.classList.add('js');
+nav.js
+
+
+id.classList.toggle('is-open')
+nav.js.is-open
+
+websocked   - openstaande verbinding met zerver voor nieuwe data
+Pulling     - vraagt server om de zoveel minuten of er nieuwe data is
+
+
+
+
+### *Chapter 13*
+
+A _Network Protocol_ describes a style of communication over a network.
+
+- Hypertext Transfer Protocol (HTTP)
+- Transmission Control Protocol (TCP) 
+
+- Server (listening computer)
+- Client (connecting computer)
+
+- Uniform Resource Location (URL)
+- IP adress -> domain name
+
+### *Chapter 14*
+
+
+
+
+

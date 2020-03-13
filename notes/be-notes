@@ -330,3 +330,41 @@ mongobd:// = een link naar je database
 
 wat doet renderen precies?
 
+### *Week 5*
+##### _Donderdag 12 maart 2020_
+
+.gitignore toevoegen
+compass app downloaden
+
+mongoose voor simpele data - optioneel
+
+#### Sessions
+_cookies_
+
+Beveiliging
+
+sessions: cookies opslaan bij clients
+cookie opslaan in browser
+
+bijv: niet inloggen, maar wel onthouden wat er in je winkelmandje zit
+
+npm install express-session
+
+cookie kan voor een bepaalde data voor een tijdje automatisch voor je invullen
+dus, niet steeds opnieuw inloggen
+
+*In je .env*
+SESSION_SECRET=ilikecats
+Geheime code die alleen je server weet
+
+test of het werkt:
+open browser - network - cookie
+
+
+
+
+
+
+
+
+
