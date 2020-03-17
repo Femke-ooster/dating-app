@@ -1,0 +1,27 @@
+<!doctype html>
+<header>
+  <%- include("../header.ejs") -%>
+</header>
+  <body>
+
+    <main>
+    <form action="/input" method="post">
+      <label> Boost
+        <input type="number" name="boost" value=""></input>
+      </label>
+
+      <label> Likes
+        <input type="number" name="likes" value=""></input>
+      </label>
+
+      <label> Messages
+        <input type="number" name="messages" value=""></input>
+      </label>
+    </main>
+    <form>
+
+    <button name="button" href="output.ejs" >Ok</button>
+
+<%- include("../script.ejs") -%>
+</script>
+</body>

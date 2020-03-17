@@ -1,0 +1,33 @@
+<!doctype html>
+<header>
+  <%- include("header.ejs") -%>
+</header>
+
+<body>
+  <nav>
+          <a href="/home"><img id="home" src="static/images/logo-datingssite.png"></a>
+    <ul>
+      <li><a href="/boost">
+          <img class="unactive" src="static/images/boost.png">
+
+              <%- include("div/divboost.ejs") -%></a></li>
+
+      <li><a href="/likes">
+          <img class="unactive" src="static/images/likes.png">
+
+              <%- include("div/divlikes.ejs") -%></a></li>
+
+      <li><a href="/messages">
+
+            <img class="active" src="static/images/messages2.png">
+              <%- include("div/divmessages.ejs") -%></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p>Check your messages on this page!</p>
+  </main>
+
+<%- include("script.ejs") -%>
+</script>
+</body>

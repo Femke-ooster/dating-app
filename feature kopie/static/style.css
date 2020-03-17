@@ -1,0 +1,86 @@
+font-family: 'Hind', sans-serif;
+
+
+
+/*NAV*/
+body {
+  font-family: 'Hind', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+    margin: 1em;
+    text-decoration: none;
+}
+
+img {
+  width: 2.3em;
+}
+
+#home {
+  width: 9em;
+}
+/*END NAV*/
+
+
+
+
+/*EXTRA NAV*/
+#boost.#boostActive {
+    visibility: visible;
+}
+/*END EXTRA NAV*/
+
+
+
+
+/*MAIN*/
+p {
+  font-family: 'Hind', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+/*END MAIN*/
+
+
+
+/*NOTIFICATION*/
+/*main color: #EB5014*/
+.notification {
+  background-color: red;
+  border-style: solid;
+  border-width: thin;
+  border-color: white;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  left: 2.5em;
+  bottom: 2.5em;
+  color: white;
+}
+
+
+
+.number {
+  position: relative;
+  bottom: 1.1em;
+  font-size: .75em;
+}
+/*NOTIFICATION*/

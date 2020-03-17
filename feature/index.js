@@ -23,14 +23,11 @@ MongoClient.connect(uri, function (err, client) {
   })
 })
 
-
-
 /*geef toegang tot statische map*/
 app.use("/static", express.static(__dirname + "/static")); /**/
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}));
 /*Zeg tegen Express dat we de ejs template engine gebruiken*/
 app.set("view engine", "ejs");
-
 /*Zeg tegenb Express dat onze HTMl 'views' in een map views te vinden zijn*/
 app.set("views", "views");
 
@@ -63,43 +60,31 @@ app.get("/messages", function(req, res){
 
 
 
-
-
 app.get("/input", function(req, res){
   /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.render("test/input.ejs", {title: "Input"});
+  res.render("test/input.ejs", req.body.note);
 });
 
 app.get("/output", function(req, res){
   /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.render("test/output.ejs", {title: "Output"});
+  db.collection('note').find(req.body.note);
+  res.render("test/output.ejs", req.body.note);
 });
-
-
 
 
 app.post('/input', addBoost)
 
 function addBoost(req, res){
 
-  db.collection('test').insertOne({
-      boost: req.body.boost,
-      likes: req.body.likes,
-      messages: req.body.messages
-  })
-  console.log(req.body); //Laat in de terminal de ingevulde gegevens zien.
-  res.redirect('output/');
-}
+    req.body.note = {
+      "boost": req.body.inBoost,
+      "likes": req.body.inLikes,
+      "messages": req.body.inMessages
+  };
+  console.log(req.body.note); //Laat in de terminal de ingevulde gegevens zien.
+   db.collection('note').insertOne(req.body.note);
+  res.redirect('output');
+};
 
-
-
-//
-
-//
-// console.log(req.body);
-// app.post('/add-movie', function(req, res){
-//   console.log(req.body)
-//   res.end()
-// })
 
 app.listen(port, () => console.log("Running my NodeJS server at" + port));
