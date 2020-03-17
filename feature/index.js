@@ -61,30 +61,26 @@ app.get("/messages", function(req, res){
 
 
 app.get("/input", function(req, res){
-  /*method .render beschikbaar gesteld door ejs op het response object*/
   res.render("test/input.ejs", req.body.note);
 });
-
-app.get("/output", function(req, res){
-  /*method .render beschikbaar gesteld door ejs op het response object*/
-  db.collection('note').find(req.body.note);
-  res.render("test/output.ejs", req.body.note);
-});
-
 
 app.post('/input', addBoost)
 
 function addBoost(req, res){
 
     req.body.note = {
-      "boost": req.body.inBoost,
-      "likes": req.body.inLikes,
-      "messages": req.body.inMessages
+      boost: req.body.inBoost,
+      likes: req.body.inLikes,
+      messages: req.body.inMessages
   };
   console.log(req.body.note); //Laat in de terminal de ingevulde gegevens zien.
-   db.collection('note').insertOne(req.body.note);
-  res.redirect('output');
+  res.render("test/output.ejs", req.body.note);
 };
 
 
 app.listen(port, () => console.log("Running my NodeJS server at" + port));
+
+/*method .render beschikbaar gesteld door ejs op het response object*/
+//   db.collection('note').findOne((err, notification) => {
+//   console.log(notification)
+// })
