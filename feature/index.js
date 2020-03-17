@@ -35,7 +35,7 @@ app.set("views", "views");
 
 app.get("/", function(req, res){
   /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.redirect("/home");
+  res.redirect("/home",);
 });
 
 app.get("/home", function(req, res){
@@ -74,7 +74,7 @@ function addBoost(req, res){
       messages: req.body.inMessages
   };
   console.log(req.body.note); //Laat in de terminal de ingevulde gegevens zien.
-  res.render("test/output.ejs", req.body.note);
+  res.render("index.ejs", req.body.note);
 };
 
 

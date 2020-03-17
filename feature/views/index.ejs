@@ -1,6 +1,9 @@
 <!doctype html>
 <header>
-  <%- include("header.ejs") -%>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <title>Matchie</title>
 </header>
 
 <body>
@@ -10,21 +13,21 @@
   <ul>
     <li><a href="/boost">
         <img src="static/images/boost.png">
-            <%- include("div/divboost.ejs") -%>
+            <div class="notification" id="noteBoost"><p class="number" id="valueBoost"><%= boost %></p></div>
         </a>
     </li>
 
     <li><a href="/likes">
         <img src="static/images/likes.png">
 
-            <%- include("div/divlikes.ejs") -%>
+            <div class="notification" id="noteLikes"><p class="number" id="valueLikes"><%= likes %></p></div>
           </a>
       </li>
 
     <li><a href="/messages">
         <img class="unactive" src="static/images/messages.png">
 
-            <%- include("div/divmessages.ejs") -%>
+            <div class="notification" id="noteMessages"><p class="number" id="valueMessages"><%= messages %></p></div>
           </a>
         </li>
   </ul>

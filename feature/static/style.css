@@ -84,3 +84,18 @@ p {
   font-size: .75em;
 }
 /*NOTIFICATION*/
+
+
+
+/*HIDDEN*/
+#noteBoost.hidden {
+  visibility: hidden;
+}
+
+#noteLikes.hidden {
+  visibility: hidden;
+}
+
+#noteMessages.hidden {
+  visibility: hidden;
+}
