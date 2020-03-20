@@ -453,4 +453,124 @@ A _Network Protocol_ describes a style of communication over a network.
 
 
 
+### *Week 6*
+##### _Donderdag 19 maart 2020_
+
+#### Prototyping
+
+Property on a function that points to an object:
+
+ImAFunction.prototype
+{constructor: f}
+
+Share methods amongst all instances
+
+.new keyword
+Creates a new object 
+
+_proto_: Array(0)
+alle functies en properties van een array
+
+
+var array = new Array('henk', 'jan')
+var array = ['henk', 'jan']
+^ doet hetzelfde
+
+constructor = altijd hoofdletter
+
+Array(args) {
+...
+}
+
+
+
+var person = {
+    name: 'henk'
+    age: 25
+    speak: function() {
+        console.log('Hello, my name is ${this.name}');
+    }
+}
+
+var person2 = {
+    name: 'henk'
+    age: 25
+}
+
+var person3 = {
+    name: 'henk'
+    age: 25
+}
+
+^ heel veel text
+
+*beter: gebruik een constuctor*
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.greeting = function() {
+    console.log('hello, my name is ${this.name}');
+    }
+}
+
+var henk = new Person('henk, 25);
+
+*f Person is constructor van henk*
+
+greeting is static method =  buiten instancies leven
+
+
+
+Person.prototype.greeting = function() {
+    console.log('hello, my name is ${this.name}');
+}
+
+var henk = new Person('henke', 25)
+
+henk 
+> Person {name: 'henk', age: 25}
+
+    _proto_
+        greeting: f
+            Hello, my name is henk
+            
+henk.greeting 
+> Hello, my name is henk
+
+
+Object (constructor)
+Person (constructor) - greeting
+Henk (instant Person) - name age
+
+
+this. = refereert naar de context waar je nu in werkt
+This is een keyword wat refereert naar property binnen de functie waarin je nu werkt
+
+
+Functie aanroepen zonder context is window.greeting()
+Dus je krijgt de global scope van .this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
