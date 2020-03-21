@@ -540,8 +540,8 @@ henk.greeting
 
 
 Object (constructor)
-Person (constructor) - greeting
-Henk (instant Person) - name age
+Person (Person constructor) - greeting
+Henk (Person instant) - name age
 
 
 this. = refereert naar de context waar je nu in werkt
@@ -552,7 +552,7 @@ Functie aanroepen zonder context is window.greeting()
 Dus je krijgt de global scope van .this
 
 
-
+https://tylermcginnis.com/beginners-guide-to-javascript-prototype/ 
 
 
 

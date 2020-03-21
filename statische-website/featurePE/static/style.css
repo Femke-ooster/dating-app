@@ -1,9 +1,9 @@
-/* font-family: 'Hind', sans-serif;
+font-family: 'Hind', sans-serif;
 
 
 
 /*NAV*/
-/* body {
+body {
   font-family: 'Hind', sans-serif;
   margin: 0;
   padding: 0;
@@ -35,34 +35,34 @@ img {
 
 #home {
   width: 9em;
-} */
+}
 /*END NAV*/
 
 
 
 
 /*EXTRA NAV*/
-/* #boost.#boostActive {
+#boost.#boostActive {
     visibility: visible;
-} */
+}
 /*END EXTRA NAV*/
 
 
 
 
 /*MAIN*/
-/* p {
+p {
   font-family: 'Hind', sans-serif;
   display: flex;
   justify-content: center;
-} */
+}
 /*END MAIN*/
 
 
 
 /*NOTIFICATION*/
-/*main color: #EB5014*/
-/* .notification {
+main color: #EB5014*/
+  .notification {
   background-color: red;
   border-style: solid;
   border-width: thin;
@@ -82,5 +82,5 @@ img {
   position: relative;
   bottom: 1.1em;
   font-size: .75em;
-} */
-/*NOTIFICATION*/ */
+}
+/*NOTIFICATION*/
