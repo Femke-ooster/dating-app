@@ -1,6 +1,6 @@
 # Dating app Feature
 
-<img width="800" alt="Schermafbeelding 2020-03-20 om 19 56 28" src="https://user-images.githubusercontent.com/59652062/77197296-3ce64380-6ae5-11ea-9d9c-dd3d228d9548.png">
+<img width="1000" alt="Schermafbeelding 2020-03-20 om 19 56 28" src="https://user-images.githubusercontent.com/59652062/77197296-3ce64380-6ae5-11ea-9d9c-dd3d228d9548.png">
 
 Hoi! Op deze pagina zal ik uitleggen hoe je mijn projectje kunt opstarten. Dit project bestaat uit verschillende stukken code die gebruikt zijn om een feature te maken voor een dating app.
 
