@@ -27,6 +27,3 @@ Verder wil ik dat wanneer je door de navigatie klikt, de notificatie verdwijnt w
 
 De rest van de feature doet het zoals ik het wil. Het gaat de goeie kant op en ik vind dat het duidelijk is hoe mijn ideale feature eruit zou komen te zien.
 
-# Bronnen
-
-
