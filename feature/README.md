@@ -26,3 +26,7 @@ De eerste is dat ik graag wil dat de data die je verstuurt van het input scherm 
 Verder wil ik dat wanneer je door de navigatie klikt, de notificatie verdwijnt wanneer je die pagina hebt bekeken. Dit probeerde ik te doen met een toggle (wat niet de juiste methode is trouwens), maar het is mij nog niet gelukt de notificaties te laten verdwijnen.
 
 De rest van de feature doet het zoals ik het wil. Het gaat de goeie kant op en ik vind dat het duidelijk is hoe mijn ideale feature eruit zou komen te zien.
+
+# Bronnen
+
+
