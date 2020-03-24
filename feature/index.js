@@ -66,7 +66,7 @@ app.get("/messages", function(req, res){
 });
 
 app.get("/input", inputData);
-
+//data binnenkrijgen via dom in html
 function inputData(req, res){
   db.collection('notification').insertOne({
     boost: req.body.inBoost,                    // opgeslagen object
@@ -80,6 +80,60 @@ function inputData(req, res){
   console.log(req.session.note);
   res.render("test/input.ejs", req.session.note);  // render input.ejs pagina
 };
+
+
+
+// app.get("/update", inputData);
+//
+// function inputData(req, res){
+//   db.collection('notification').findOne({
+//     boost: req.body.inBoost,                    // opgeslagen object
+//     likes: req.body.inLikes,
+//     messages: req.body.inMessages
+//   })
+//   function error(err, result){                  // callback
+//       if(err) throw err;
+//       res.status(200).send('data inserted')
+//   }
+//   console.log(req.session.note);
+//   res.render("test/update.ejs", req.session.note);  // render input.ejs pagina
+// };
+
+app.get("/update", update);
+//data veranderen in html
+function update(req, res){
+  db.collection('notification').findOne({
+    boost: req.body.inBoost,                    // opgeslagen object
+    likes: req.body.inLikes,
+    messages: req.body.inMessages
+  },
+  function error(err, result){                  // callback
+      if(err) throw err;
+      const id = result._id;
+
+      updateData(id, () => {
+        req.session.hasUdpdated = true;
+        res.status(200).send('data updated');
+      });
+        console.log(req.session.note);
+        res.render("test/update.ejs", req.session.note);  // render input.ejs pagina
+  });
+}
+
+function updateData(id, callback){
+  db.collection('update').updateOne(
+    {_id: ObjectID(id)},
+    {$set:{
+      boost: req.body.inBoost,                    // opgeslagen object
+      likes: req.body.inLikes,
+      messages: req.body.inMessages
+    }},
+    function error(err, result){                  // callback
+        if(err) throw err;
+
+        callback()
+  })
+}
 
 //POST
 
