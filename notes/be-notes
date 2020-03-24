@@ -360,6 +360,28 @@ Geheime code die alleen je server weet
 test of het werkt:
 open browser - network - cookie
 
+### *Week 7*
+##### _Maandag 23 maart 2020_
+
+#### Criteria
+- data moet geupdated worden dus met een udate sessions ook !
+- remove en input is optioneel
+
+#### updateOne()
+Data wijzigen
+Server moet iets read : dus sturen en ontvangen
+Get of post dat de server iets doet met data
+
+mogodb 
+ const ObjectID = require ('object ')
+$set
+updateOne
+updateMany
+$quantity
+
+#### Sessions
+
+
 
 
 
