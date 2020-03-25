@@ -81,24 +81,6 @@ function inputData(req, res){
   res.render("test/input.ejs", req.session.note);  // render input.ejs pagina
 };
 
-
-
-// app.get("/update", inputData);
-//
-// function inputData(req, res){
-//   db.collection('notification').findOne({
-//     boost: req.body.inBoost,                    // opgeslagen object
-//     likes: req.body.inLikes,
-//     messages: req.body.inMessages
-//   })
-//   function error(err, result){                  // callback
-//       if(err) throw err;
-//       res.status(200).send('data inserted')
-//   }
-//   console.log(req.session.note);
-//   res.render("test/update.ejs", req.session.note);  // render input.ejs pagina
-// };
-
 app.get("/update", update);
 //data veranderen in html
 function update(req, res){
@@ -114,10 +96,10 @@ function update(req, res){
       updateData(id, () => {
         req.session.hasUdpdated = true;
         res.status(200).send('data updated');
-      });
-        console.log(req.session.note);
-        res.render("test/update.ejs", req.session.note);  // render input.ejs pagina
-  });
+      })
+  })
+  console.log(req.session.note);
+  res.render("test/update.ejs", req.session.note);  // render input.ejs pagina
 }
 
 function updateData(id, callback){
@@ -145,9 +127,22 @@ function addBoost(req, res){
       boost: req.body.inBoost,
       likes: req.body.inLikes,
       messages: req.body.inMessages
-  };
+  },
   console.log(req.session.note); //Laat in de terminal de gegevens zien.
-  res.redirect('home')
+  res.render('index.ejs', req.session.note)
+};
+
+app.post('/updateNotifications', addBoost)
+
+function addBoost(req, res){
+
+    req.session.note = {
+      boost: req.body.inBoost,
+      likes: req.body.inLikes,
+      messages: req.body.inMessages
+  },
+  console.log(req.session.note); //Laat in de terminal de gegevens zien.
+  res.render('index.ejs', req.session.note)
 };
 
 app.listen(port, () => console.log("Running my NodeJS server at" + port));
