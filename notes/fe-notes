@@ -556,6 +556,77 @@ https://tylermcginnis.com/beginners-guide-to-javascript-prototype/
 
 
 
+_https://scotch.io/tutorials/understanding-scope-in-javascript_
+Hammad Ahmed, februari 2017
+
+## Scope 
+
+> "Scope is the accessibility of variables, functions, and objects in some particular part of your > code during runtime. In other words, scope determines the visibility of variables and other resources in areas of your code."
+
+> "Only grant full access privileges when needed. This will help you track changes and keep > an account of who did what. This is called The Principle of Least Access."
+
+In the JavaScript language there are two types of scopes:
+
+* Global Scope
+* Local Scope
+
+Variables defined inside a function are in local scope while variables defined outside of a function are in the global scope. Each function when invoked creates a new scope.
+
+Global scope example:
+// the scope is by default global
+var name = 'Hammad';
+
+Local scope Example:
+// Global Scope
+function someFunction() {
+    // Local Scope #1
+    function someOtherFunction() {
+        // Local Scope #2
+    }
+}
+
+> "Block statements like if and switch conditions or for and while loops, unlike functions, > don't create a new scope. Variables defined inside of a block statement will remain in the scope they were already in."
+
+
+## Context
+http://ryanmorr.com/understanding-scope-and-context-in-javascript/
+Ryan Morr, 16 augustus 2013
+
+>"Context is most often determined by how a function is invoked."
+
+_https://scotch.io/tutorials/understanding-scope-in-javascript_
+Hammad Ahmed, februari 2017
+
+> "Context is used to refer to the value of this in some particular part of your code.
+> Scope refers to the visibility of variables and context refers to the value of this in the same scope. We can also change the context using function methods, which we will discuss later. In the global scope context is always the Window object."
+
+> "If scope is in the method of an object, context will be the object the method is part of."
+
+## Closure
+
+_https://scotch.io/tutorials/understanding-scope-in-javascript_
+Hammad Ahmed, februari 2017
+
+> "A Closure is created when an inner function tries to access the scope chain of its outer function meaning the variables outside of the immediate lexical scope. Closures contain their own scope chain, the scope chain of their parents and the global scope."
+
+> "A closure can also access the variables of its outer function even after the function has returned. This allows the returned function to maintain access to all the resources of the outer function."
+
+
+## Hoisting
+
+w3schools.com/js/js_hoisting.asp
+
+> "Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function)."
+> "JavaScript only hoists declarations, not initializations."
+
+> "Declare Your Variables At the Top !
+Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript."
+
+> "If a developer doesn't understand hoisting, programs may contain bugs (errors)."
+
+> "To avoid bugs, always declare all variables at the beginning of every scope."
+
+> "Since this is how JavaScript interprets the code, it is always a good rule."
 
 
 

@@ -1,6 +1,7 @@
 <!doctype html>
 <header>
   <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../static/reset.css">
   <link rel="stylesheet" type="text/css" href="../static/style.css">
   <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
   <title>Matchie</title>
@@ -9,34 +10,36 @@
 <body>
 
 <nav>
-        <a href="index.html"><img id="home" src="../static/images/logo-datingssite.png" width attribute></a>
+        <a href="index.html"><img id="home" src="../static/images/logo-datingssite.png"></a>
   <ul>
-    <li><a href="boost.html">
-        <img src="../static/images/boost.png">
-            <div class="notification" id="noteBoost"><p class="number" id="valueBoost">1</p></div>
+    <li><a href="boost.html" id="boost">
+        <img src="../static/images/boost.png" class="img" id="imgBoost">
+            <div class="notification" id="noteBoost"><p class="number">1</p></div>
+            <div class="current" id="currentBoost"></div>
         </a>
     </li>
 
-    <li><a href="likes.html">
-        <img src="../static/images/likes.png">
-
-            <div class="notification" id="noteLikes"><p class="number" id="valueLikes">5</p></div>
+    <li><a href="likes.html" id="likes">
+        <img src="../static/images/likes.png" class="img" id="imgLikes">
+            <div class="notification" id="noteLikes"><p class="number">5</p></div>
+            <div class="current" id="currentLikes"></div>
           </a>
       </li>
 
-    <li><a href="messages.html">
-        <img class="unactive" src="../static/images/messages.png">
-
-            <div class="notification" id="noteMessages"><p class="number" id="valueMessages">2</p></div>
+    <li><a href="messages.html" id="messages">
+        <img src="../static/images/messages.png" class="img" id="imgMessages">
+            <div class="notification" id="noteMessages"><p class="number">2</p></div>
+            <div class="current" id="currentMessages"></div>
           </a>
         </li>
   </ul>
 </nav>
 
 <main>
-  <p>Welcome to Matchie!</p>
+    <p>Home</p>
 </main>
 
-<script type="text/javascript" src="static/JS/java.js">
+
+<script type="text/javascript" src="../static/JS/java.js">
 </script>
 </body>

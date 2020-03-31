@@ -4,49 +4,22 @@ true, white: true*/
 /*eslint 'no-console':0*/
 /* exported myFunction */
 
-/*CODE voor hamburger menu van Carlijn Bruin*/
-/*
-var zoekbutton = document.querySelector(".burger");
-var zoekveld = document.querySelector(".linkjes");
+ console.log('hellow :)');
 
-function show() {
-	zoekveld.classList.toggle("show-search");
-}
+window.onload = function () {
+//Get the current page path.
+var patharray = location.pathname.split("/views/index.html");
+var foldername = patharray[1];
+  // If on the root folder of the site, highlight the first link.
+  if (foldername == "/views/boost.html") {
+  document.getElementById("currentBoost").className = "currentpage";
 
-zoekbutton.addEventListener("click", show);
-*/
+  } else if (foldername == "/views/likes.html") {
+  document.getElementById("currentLikes").className = "currentpage";
 
-// console.log('hellow :)');
-//
-// // dit zijn de notificatie div'jes
-// let boost = document.getElementById('noteBoost');
-// let likes = document.getElementById('noteLikes');
-// let messages = document.getElementById('noteMessages');
-//
-// // dit zijn de nummers in p
-// let valueBoost = document.getElementById('valueBoost');
-// let valueLikes = document.getElementById('valueLikes');
-// let valueMessages = document.getElementById('valueMessages');
-//
-// let type = [boost, likes, messages];
-// let value = [valueBoost, valueLikes, valueMessages];
-//
-// function notifyBoost {
-// 	if(valueBoost > 0){
-// 		// https://stackoverflow.com/questions/9456289/how-to-make-a-div-visible-and-invisible-with-javascript
-// 		boost.style.visibility = 'visible';
-// 		// https://www.w3schools.com/js/js_htmldom_html.asp
-// 		document.getElementById("valueBoost").innerHTML = "1";
-// 	} else {
-// 		boost.style.visibility = 'hidden'; // hide, but lets the element keep its size
-// 	}
-// }
+  } else if (foldername == "/views/messages.html") {
+  document.getElementById("currentMessages").className = "currentpage";
+  }
+};
 
-// var boost = document.querySelector("#boost");
-// var boostActive = document.querySelector("#boostActive");
-//
-// function show() {
-// 	boostActive.classList.toggle("active");
-// }
-//
-// boost.addEventListener("click", show);
+//Bron https://www.youtube.com/watch?v=ZE7G_4u4CMY
