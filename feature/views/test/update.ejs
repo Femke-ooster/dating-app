@@ -20,10 +20,14 @@
       <label> Messages
         <input type="number" name="updateMessages"></input>
       </label>
-    </main>
-    <form>
+      <input type="hidden" name="_id" value="<%= _id %>"></input>
 
-    <button name="button" href="output.ejs" >Ok</button>
+<button name="button" type="submit" >Ok</button>
+
+    </form>
+    </main>
+
+
 
 <%- include("../script.ejs") -%>
 </script>

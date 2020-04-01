@@ -4,13 +4,12 @@ var mongo = require("mongodb");
 const express = require("express");
 const session = require("express-session");
 const app = express();
-const port = 8000;
+const port = 5000;
 /*env beschikbaarvoor node.js*/
 require("dotenv").config();
 
 let db;
-const MongoClient = require("mongodb").MongoClient;
-const ObjectId = require("mongodb").ObjectID;
+const { MongoClient, ObjectID } = require('mongodb');
 const uri = "mongodb+srv://" + process.env.DB_USER + ":" + process.env.DB_PASSWORD + "@cluster0-lrmlb.azure.mongodb.net/test?retryWrites=true&w=majority";
 /*const uri = "mongodb+srv://femkeooster:<password>@cluster0-lrmlb.azure.mongodb.net/test?retryWrites=true&w=majority";*/
 
@@ -45,15 +44,14 @@ app.get("/", function(req, res){
   res.redirect("/home");
 });
 
-app.get("/home", function(req, res){
-
-  db.collection("data").findOne(
+app.get("/home/:id", function(req, res){
+  db.collection("data").findOne( // zoekt id in de url
 		{_id: ObjectID(req.params.id)},
-		function (err, result){
+		  function (err, result){
 			if (err) throw err;
-			console.log('result:', result);
+	console.log("result:", result);
   /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.render("index.ejs", req.session.data);
+  res.render("index.ejs", result);
   });
 });
 
@@ -76,15 +74,15 @@ app.get("/input", function(req, res){
   res.render("test/input.ejs");
 });
 
-app.get("/update", id);
+app.get("/update/:id", findId);
 
-function id(req, res) {
-	db.collection("data").findOne(
+function findId(req, res) {
+	db.collection("data").findOne( //
 		{_id: ObjectID(req.params.id)},
 		  function (err, result){
 			if (err) throw err;
-	console.log("result:", result);
-  res.render("test/update.ejs", result);
+	console.log("result:", result); //result = data die je doorgeeft
+  res.render("test/update.ejs", result); //result wordt doorgestuurd naar update.ejs zodat je de data kan gebruiken
   });
 };
 
@@ -93,6 +91,7 @@ function id(req, res) {
 app.post("/inputNotifications", addData);
 
 function addData(req, res){
+
   req.session.data = {
     boost: req.body.boost,
     likes: req.body.likes,
@@ -104,7 +103,7 @@ function addData(req, res){
 		req.session.data._id = result.insertedId;
 
   console.log(req.session.data);
-  res.redirect("/home");
+  res.redirect("/home/" + req.session.data._id);
   }
 };
 
@@ -112,16 +111,17 @@ app.post("/updateNotifications", updateData);
 
 function updateData(req, res){
   db.collection("data").updateOne(
-    {_id: ObjectID(req.params.id)},
+    {_id: ObjectID(req.body._id)}, //niks uit url, maar uit body: .get = params , .post = body
 		{ $set: {
       boost: req.body.updateBoost,
       likes: req.body.updateLikes,
       messages: req.body.updateMessages} },
 		(err)=>{
 			if (err) throw err;
-			res.redirect("/home", req.params.id);
+			res.redirect("/home/" + req.body._id);
 		});
 };
+
 
 // //INPUT
 //
