@@ -39,11 +39,6 @@ app.set("views", "views");
 
 //GET
 
-app.get("/", function(req, res){
-  /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.redirect("/home");
-});
-
 app.get("/home/:id", function(req, res){
   db.collection("data").findOne( // zoekt id in de url
 		{_id: ObjectID(req.params.id)},
