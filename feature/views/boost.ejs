@@ -4,20 +4,20 @@
 
 <body>
   <nav>
-          <a href="/home"><img id="home" src="static/images/logo-datingssite.png"></a>
+          <a href="/home/<%= _id %>"><img id="home" src="/static/images/logo-datingssite.png"></a>
     <ul>
       <li><a href="/boost">
 
-            <img class="active" src="static/images/boost2.png">
+            <img class="active" src="/static/images/boost2.png">
               <%- include("div/divboost.ejs") -%></a></li>
 
       <li><a href="/likes">
-          <img class="unactive" src="static/images/likes.png">
+          <img class="unactive" src="/static/images/likes.png">
 
               <%- include("div/divlikes.ejs") -%></a></li>
 
       <li><a href="/messages">
-          <img class="unactive" src="static/images/messages.png">
+          <img class="unactive" src="/static/images/messages.png">
 
               <%- include("div/divmessages.ejs") -%></a></li>
     </ul>
@@ -28,5 +28,4 @@
   </main>
 
 <%- include("script.ejs") -%>
-</script>
 </body>
