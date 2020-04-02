@@ -559,6 +559,10 @@ https://tylermcginnis.com/beginners-guide-to-javascript-prototype/
 _https://scotch.io/tutorials/understanding-scope-in-javascript_
 Hammad Ahmed, februari 2017
 
+
+
+
+
 ## Scope 
 
 > "Scope is the accessibility of variables, functions, and objects in some particular part of your > code during runtime. In other words, scope determines the visibility of variables and other resources in areas of your code."
@@ -591,6 +595,33 @@ function someFunction() {
 ## Context
 http://ryanmorr.com/understanding-scope-and-context-in-javascript/
 Ryan Morr, 16 augustus 2013
+
+this. keyword = uitkomstvan context
+
+const test = {
+    prop:42;
+    func: function() {
+    return this.prop;
+    }
+}
+
+this. = context en is dynamisch
+
+dus kan veranderen wanneer je het keyword new gebruikt
+
+sku unieke 
+
+function notification(label) {
+    this.label = label
+    
+    this.show = function
+    console log('show')
+        //show notification
+}
+
+var newMessageNotificatio = new notification(' new message')
+
+newMessageNotification.show()
 
 >"Context is most often determined by how a function is invoked."
 
@@ -629,6 +660,11 @@ Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript
 > "Since this is how JavaScript interprets the code, it is always a good rule."
 
 
+## Prototype
+
+Prototype kijkt steeds dieper in de functie (steeds hoger tot object)
+
+Prototype zorgt voor een stukje memorie die makkelijk te verwerken in
 
 
 

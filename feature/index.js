@@ -39,6 +39,10 @@ app.set("views", "views");
 
 //GET
 
+app.get("/home", function(req, res){
+  res.render("index.ejs");
+});
+
 app.get("/home/:id", function(req, res){
   db.collection("data").findOne( // zoekt id in de url
 		{_id: ObjectID(req.params.id)},
@@ -193,4 +197,4 @@ function updateData(req, res){
 // }
 
 
-app.listen(port, () => console.log("Running my NodeJS server at" + port));
+app.listen(port, () => console.log("Running at localhost:" + port));
