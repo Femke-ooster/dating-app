@@ -19,9 +19,6 @@ MongoClient.connect(uri, function (err, client) {
     throw err;
   }
   db = client.db(process.env.DB_NAME)
-  // db.collection('test').insertOne({
-  //   title: 'Hello!'
-  // })
 });
 
 /*geef toegang tot statische map*/
@@ -48,25 +45,39 @@ app.get("/home/:id", function(req, res){
 		{_id: ObjectID(req.params.id)},
 		  function (err, result){
 			if (err) throw err;
-	console.log("result:", result);
   /*method .render beschikbaar gesteld door ejs op het response object*/
   res.render("index.ejs", result);
   });
 });
 
-app.get("/boost", function(req, res){
+app.get("/boost/:id", function(req, res){
+  db.collection("data").findOne( // zoekt id in de url
+		{_id: ObjectID(req.params.id)},
+		  function (err, result){
+			if (err) throw err;
   /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.render("boost.ejs", req.session.data);
+  res.render("boost.ejs", result);
+  });
 });
 
-app.get("/likes", function(req, res){
+app.get("/likes/:id", function(req, res){
+  db.collection("data").findOne( // zoekt id in de url
+		{_id: ObjectID(req.params.id)},
+		  function (err, result){
+			if (err) throw err;
   /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.render("likes.ejs", req.session.data);
+  res.render("likes.ejs", result);
+  });
 });
 
-app.get("/messages", function(req, res){
+app.get("/messages/:id", function(req, res){
+  db.collection("data").findOne( // zoekt id in de url
+		{_id: ObjectID(req.params.id)},
+		  function (err, result){
+			if (err) throw err;
   /*method .render beschikbaar gesteld door ejs op het response object*/
-  res.render("messages.ejs", req.session.data);
+  res.render("messages.ejs", result);
+  });
 });
 
 app.get("/input", function(req, res){
@@ -80,7 +91,6 @@ function findId(req, res) {
 		{_id: ObjectID(req.params.id)},
 		  function (err, result){
 			if (err) throw err;
-	console.log("result:", result); //result = data die je doorgeeft
   res.render("test/update.ejs", result); //result wordt doorgestuurd naar update.ejs zodat je de data kan gebruiken
   });
 };
@@ -101,7 +111,7 @@ function addData(req, res){
 		if (err) throw err;
 		req.session.data._id = result.insertedId;
 
-  console.log(req.session.data);
+  console.log("Input:", req.session.data);
   res.redirect("/home/" + req.session.data._id);
   }
 };
@@ -117,84 +127,10 @@ function updateData(req, res){
       messages: req.body.updateMessages} },
 		(err)=>{
 			if (err) throw err;
+
+      console.log("Output:", req.session.data);
 			res.redirect("/home/" + req.body._id);
 		});
 };
-
-
-// //INPUT
-//
-// app.get("/input", inputData);
-// //data binnenkrijgen via dom in html
-// function inputData(req, res){
-//   db.collection('notification').insertOne(
-//   req.session.note = {
-//     boost: req.body.inBoost,                    // opgeslagen object
-//     likes: req.body.inLikes,
-//     messages: req.body.inMessages
-//   })
-//   function error(err, result){                  // callback
-//       if(err) throw err;
-//       res.status(200).send('data inserted')
-//   }
-//   console.log(req.session.note);
-//   res.render("test/input.ejs");  // render input.ejs pagina
-// };
-//
-// //UPDATE
-//
-// app.get("/update", update);
-// //data veranderen in html
-// function update(req, res){
-//   db.collection('notification').findOne({
-//     boost: req.body.inBoost,                    // opgeslagen object
-//     likes: req.body.inLikes,
-//     messages: req.body.inMessages
-//   },
-//   function error(err, result){                  // callback
-//       if(err) throw err;
-//       const id = result._id;
-//       updatePage(id, () => {
-//         req.session.note = true;
-//         res.status(200).send('data updated');
-//       })
-//   })
-//   console.log(req.session.note);
-//   res.render("test/update.ejs", req.session.note);  // render input.ejs pagina
-// }
-//
-// //POST
-//
-// app.post('/inputNotifications', addBoost)
-//
-// function addBoost(req, res){
-//
-//     req.session.note = {
-//       boost: req.body.inBoost,
-//       likes: req.body.inLikes,
-//       messages: req.body.inMessages
-//   },
-//   console.log(req.session.note); //Laat in de terminal de gegevens zien.
-//   res.render('index.ejs', req.session.note)
-// };
-//
-// //UPDATE
-//
-// app.post('/updateNotifications', updatePage)
-//
-// function updatePage(id, callback){
-//   db.collection('update').updateOne(
-//     {"_id": ObjectID(req.body._id)},
-//     {$set:{
-//       boost: req.body.updateBoost,                    // opgeslagen object
-//       likes: req.body.updateLikes,
-//       messages: req.body.updateMessages
-//     }},
-//     function error(err, result){                  // callback
-//         if(err) throw err;
-//         res.redirect("/home");
-//   })
-// }
-
 
 app.listen(port, () => console.log("Running at localhost:" + port));
