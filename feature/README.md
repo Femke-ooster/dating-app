@@ -17,13 +17,3 @@ Het werkt!
 
 _Werkt het toch niet? Probeer dan een npm install te doen in de map van de repository in de terminal._
 
-# Over de feature
-
-De feature is nog niet helemaal af. Er zijn namelijk twee dingen die ik niet heb kunnen laten werken die ik wel zou willen zien op de app.
-
-De eerste is dat ik graag wil dat de data die je verstuurt van het input scherm naar de home pagina, ook op de andere pagina's van de app worden doorgegeven. Nu zul je waarschijnlijk zien dat als je door de navigatie gaat, de getallen van de notificaties verspringen. Dat is omdat op de andere pagina's de data van de notificaties statisch zijn en zijn ingevuld in de html pagina.
-
-Verder wil ik dat wanneer je door de navigatie klikt, de notificatie verdwijnt wanneer je die pagina hebt bekeken. Dit probeerde ik te doen met een toggle (wat niet de juiste methode is trouwens), maar het is mij nog niet gelukt de notificaties te laten verdwijnen.
-
-De rest van de feature doet het zoals ik het wil. Het gaat de goeie kant op en ik vind dat het duidelijk is hoe mijn ideale feature eruit zou komen te zien.
-
