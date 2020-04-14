@@ -34,6 +34,9 @@ function getBoost() {
     
     console.log("Activating getBoost");
     console.log("Boost page loaded");
+    
+    document.getElementById("noBoost").style.display = 'none';
+    document.getElementById("wantBoost").style.display = 'inline';
 
         var button = document.getElementById('button');
         button.addEventListener('click', chance);
@@ -54,6 +57,8 @@ function getLikes() {
     
     console.log("Activating getLikes");
     console.log("Likes page loaded");
+    
+    document.getElementById("hiddenProfile").style.display = 'inline';
     
         // Context, Hoisting & Scoping
         
