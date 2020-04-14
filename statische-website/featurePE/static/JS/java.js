@@ -4,22 +4,68 @@ true, white: true*/
 /*eslint 'no-console':0*/
 /* exported myFunction */
 
- console.log('hellow :)');
+console.log('hellow :)');
+
+var pictures = ['../static/images/plus.png', '../static/images/minus.png']; //closure
 
 window.onload = function () {
 //Get the current page path.
-var patharray = location.pathname.split("/views/index.html");
-var foldername = patharray[1];
-  // If on the root folder of the site, highlight the first link.
-  if (foldername == "/views/boost.html") {
+//Bron https://www.youtube.com/watch?v=ZE7G_4u4CMY
+var patharray = location.pathname.split("/");
+var foldername = patharray[2];
+    
+  if (foldername == "boost.html") {
   document.getElementById("currentBoost").className = "currentpage";
-
-  } else if (foldername == "/views/likes.html") {
+      console.log("Currently in Boost");
+      getBoost();
+      
+  } else if (foldername == "likes.html") {
   document.getElementById("currentLikes").className = "currentpage";
-
-  } else if (foldername == "/views/messages.html") {
+      console.log("Currently in Likes");
+      getLikes();
+      
+  } else if (foldername == "messages.html") {
   document.getElementById("currentMessages").className = "currentpage";
+      console.log("Currently in Messages");
   }
 };
 
-//Bron https://www.youtube.com/watch?v=ZE7G_4u4CMY
+function getBoost() {
+    
+    console.log("Activating getBoost");
+    console.log("Boost page loaded");
+
+        var button = document.getElementById('button');
+        button.addEventListener('click', chance);
+
+        function chance() {
+            var number = Math.floor((Math.random() * 10) ); //scoping
+            if (number < 5) {
+                console.log("You got some boosts!");
+                document.getElementById('image').src = pictures[0]; //closure
+            } else {
+                console.log("You lost boosts!");
+                document.getElementById('image').src = pictures[1];
+            }
+    } 
+}
+
+function getLikes() {
+    
+    console.log("Activating getLikes");
+    console.log("Likes page loaded");
+    
+        // Context, Hoisting & Scoping
+        
+        function Person(name, age) {
+            this.name = name; //context
+            this.age = age;
+            console.log(name, age);
+            
+                console.log('hello, my name is ' + this.name + ' and I am ' + this.age + ' years old!'); //closure
+                document.getElementById("person1").textContent = 'Hi there! My name is ' + this.name + ' and I am ' + this.age + ' years old.';     
+            }
+    
+    john = new Person("John", 18); //hoisting
+    console.log(john);
+}

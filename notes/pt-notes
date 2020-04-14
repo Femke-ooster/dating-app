@@ -226,3 +226,21 @@ bronnen : auteur, data
 (stack overflow, wesbos)
 
 guides.github.com
+
+
+# Git
+
+Commit changes: - git add .
+                - git commit -m ""
+                - git push
+
+New branch: git branch (name file)
+
+Merge master in branch: git merge (name master branch)
+
+To other branch:    - git branch
+                    - git checkout (name file)
+                    
+Pull masterbranch: To other branch: - git branch
+                                    - git checkout (name file)
+                                    - git pull

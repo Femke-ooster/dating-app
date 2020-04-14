@@ -642,6 +642,19 @@ Hammad Ahmed, februari 2017
 
 > "A closure can also access the variables of its outer function even after the function has returned. This allows the returned function to maintain access to all the resources of the outer function."
 
+_https://www.youtube.com/watch?v=3a0I8ICR1Vg_
+Web Dev Simplified, 3 december 2019
+
+const myName = 'Femke'
+
+function printName() {
+    console.log(myName)
+}
+
+printName();
+
+Wanneer je een closure gebruikt, betekend dat dat je een variabele kan gebruiken in een functie die buiten de functie staat.
+
 
 ## Hoisting
 
@@ -658,6 +671,12 @@ Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript
 > "To avoid bugs, always declare all variables at the beginning of every scope."
 
 > "Since this is how JavaScript interprets the code, it is always a good rule."
+
+https://www.youtube.com/watch?v=aT1WFBmHstw
+DavSage, 16 juni 2019
+
+https://www.youtube.com/watch?v=EgRpux3bi-8&t=3s
+Jantcu, 12 februari 2020
 
 
 ## Prototype

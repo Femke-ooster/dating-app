@@ -84,10 +84,29 @@ a div.currentpage {
 
 
 /*MAIN*/
-p {
+h2 {
+  font-size: 1.5em;
+}
+
+p, h2 {
   font-family: 'Hind', sans-serif;
   display: flex;
   justify-content: center;
+}
+
+.person {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: #EB5014;
+  color: white;
+}
+
+#image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em;
 }
 /*END MAIN*/
 

@@ -4,7 +4,7 @@ var mongo = require("mongodb");
 const express = require("express");
 const session = require("express-session");
 const app = express();
-const port = 3000;
+const port = 8000;
 /*env beschikbaarvoor node.js*/
 require("dotenv").config();
 
