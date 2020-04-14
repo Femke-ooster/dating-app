@@ -10,7 +10,7 @@ var pictures = ['../static/images/plus.png', '../static/images/minus.png']; //cl
 
 window.onload = function () {
 //Get the current page path.
-//Bron https://www.youtube.com/watch?v=ZE7G_4u4CMY
+//Bron: Alen Simpson, 13 april 2018, https://www.youtube.com/watch?v=ZE7G_4u4CMY
 var patharray = location.pathname.split("/");
 var foldername = patharray[2];
     
@@ -59,8 +59,6 @@ function getLikes() {
     console.log("Likes page loaded");
     
     document.getElementById("hiddenProfile").style.display = 'inline';
-    
-        // Context, Hoisting & Scoping
         
         function Person(name, age) {
             this.name = name; //context
