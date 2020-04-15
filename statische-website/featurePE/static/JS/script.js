@@ -4,9 +4,9 @@ true, white: true*/
 /*eslint 'no-console':0*/
 /* exported myFunction */
 
-console.log('hellow :)');
+console.log("hellow :)");
 
-var pictures = ['../static/images/plus.png', '../static/images/minus.png']; //closure
+var pictures = ["../static/images/plus.png", "../static/images/minus.png"]; //closure
 
 window.onload = function () {
 //Get the current page path.
